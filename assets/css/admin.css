@@ -1,0 +1,62 @@
+/* ===== ADMIN DASHBOARD COLORFUL CARDS ===== */
+
+.admin-card {
+    border-radius: 18px;
+    padding: 25px;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+/* Students */
+.admin-card:nth-child(1) {
+    background: #E3F2FD;
+    border-left: 6px solid #2196F3;
+}
+
+/* Faculty */
+.admin-card:nth-child(2) {
+    background: #F3E5F5;
+    border-left: 6px solid #9C27B0;
+}
+
+/* Departments */
+.admin-card:nth-child(3) {
+    background: #E8F5E9;
+    border-left: 6px solid #4CAF50;
+}
+
+/* Timetable */
+.admin-card:nth-child(4) {
+    background: #FFF3E0;
+    border-left: 6px solid #FF9800;
+}
+
+/* Fees */
+.admin-card:nth-child(5) {
+    background: #FFF8E1;
+    border-left: 6px solid #FFC107;
+}
+
+/* Results */
+.admin-card:nth-child(6) {
+    background: #E0F7FA;
+    border-left: 6px solid #00ACC1;
+}
+
+/* Clubs */
+.admin-card:nth-child(7) {
+    background: #FCE4EC;
+    border-left: 6px solid #E91E63;
+}
+
+/* Announcements */
+.admin-card:nth-child(8) {
+    background: #EDE7F6;
+    border-left: 6px solid #673AB7;
+}
+
+/* Hover */
+.admin-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}

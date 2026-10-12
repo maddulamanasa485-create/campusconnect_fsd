@@ -1,0 +1,161 @@
+/* CampusConnect Login Page */
+
+.login-page {
+    min-height: 100vh;
+    margin: 0;
+
+    background-image:
+        linear-gradient(
+            rgba(15, 55, 85, 0.55),
+            rgba(15, 55, 85, 0.55)
+        ),
+        url("../images/college-bg.png");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page .login-container {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 25px;
+}
+
+.login-page .login-box {
+    width: 420px;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    border-top: 6px solid #f4774a;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.login-page .login-box h1 {
+    text-align: center;
+
+    color: #174a70;
+
+    font-size: 34px;
+
+    margin-bottom: 8px;
+}
+
+.login-page .login-box p {
+    text-align: center;
+
+    color: #667085;
+
+    margin-bottom: 30px;
+}
+
+.login-page .login-box label {
+    display: block;
+
+    color: #174a70;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.login-page .login-box input,
+.login-page .login-box select {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 20px;
+
+    border: 1px solid #d5dce3;
+
+    border-radius: 10px;
+
+    background: #f8fafc;
+
+    font-size: 15px;
+
+    outline: none;
+}
+
+.login-page .login-box input:focus,
+.login-page .login-box select:focus {
+    border-color: #f4774a;
+
+    background: white;
+
+    box-shadow: 0 0 0 3px rgba(244, 119, 74, 0.15);
+}
+
+.login-page .login-box button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #174a70;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.login-page .login-box button:hover {
+    background: #f4774a;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(244, 119, 74, 0.3);
+}
+
+.login-page .message {
+    background: #fff1ed;
+
+    color: #c2410c;
+
+    padding: 12px;
+
+    border-radius: 8px;
+
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+
+    .login-page .login-box {
+        width: 100%;
+
+        max-width: 380px;
+
+        padding: 30px 25px;
+    }
+
+    .login-page .login-box h1 {
+        font-size: 28px;
+    }
+}

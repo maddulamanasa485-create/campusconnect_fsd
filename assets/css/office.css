@@ -1,0 +1,140 @@
+/* ==============================
+   OFFICE DASHBOARD
+   ============================== */
+
+.office-page {
+    min-height: 100vh;
+    margin: 0;
+    background: #f4f7fb;
+    font-family: Arial, sans-serif;
+}
+
+.office-dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 50px 25px;
+}
+
+.office-dashboard h1 {
+    text-align: center;
+    color: #243b53;
+    margin-bottom: 8px;
+    font-size: 32px;
+}
+
+.office-dashboard .subtitle {
+    text-align: center;
+    color: #718096;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+/* Cards */
+
+.office-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.office-card {
+    display: block;
+    text-decoration: none;
+    padding: 30px;
+    border-radius: 18px;
+    background: white;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+    transition: 0.3s;
+}
+
+.office-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+}
+
+.office-card .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.office-card h2 {
+    margin: 0 0 10px;
+    font-size: 22px;
+    color: #243b53;
+}
+
+.office-card p {
+    margin: 0;
+    color: #718096;
+    line-height: 1.5;
+}
+
+/* Card themes */
+
+.fees-card {
+    background: #effcf4;
+    border-color: #c6f0d4;
+}
+
+.students-card {
+    background: #eef6ff;
+    border-color: #c9e2ff;
+}
+
+.payments-card {
+    background: #fff8e8;
+    border-color: #f5dfad;
+}
+
+.receipts-card {
+    background: #f8f0ff;
+    border-color: #dfc8f5;
+}
+
+.nodue-card {
+    background: #fff1f4;
+    border-color: #f2cbd5;
+}
+
+.hallticket-card {
+    background: #eefcfb;
+    border-color: #c5ebe7;
+}
+
+/* Logout */
+
+.office-dashboard .logout {
+    display: block;
+    width: fit-content;
+    margin: 35px auto 0;
+    padding: 12px 28px;
+    background: #243b53;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.office-dashboard .logout:hover {
+    background: #102a43;
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .office-dashboard {
+        padding: 30px 18px;
+    }
+
+    .office-dashboard h1 {
+        font-size: 26px;
+    }
+
+    .office-card {
+        padding: 25px;
+    }
+}

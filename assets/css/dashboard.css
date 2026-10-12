@@ -1,0 +1,335 @@
+/* ===== CAMPUSCONNECT STUDENT DASHBOARD ===== */
+
+body {
+    margin: 0 !important;
+    min-height: 100vh !important;
+    font-family: "Segoe UI", Arial, sans-serif !important;
+
+    background:
+        radial-gradient(circle at 10% 20%, rgba(120, 180, 255, 0.25), transparent 25%),
+        radial-gradient(circle at 90% 15%, rgba(255, 150, 210, 0.25), transparent 25%),
+        linear-gradient(135deg, #eef4ff, #f8efff, #fff5f8) !important;
+
+    color: #202040 !important;
+}
+
+/* ===== MAIN CONTAINER ===== */
+
+.dashboard-container {
+    width: 92% !important;
+    max-width: 1250px !important;
+    margin: auto !important;
+    padding: 35px 0 55px !important;
+}
+
+/* ===== HEADER ===== */
+
+.dashboard-header {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+
+    padding: 30px 34px !important;
+    margin-bottom: 30px !important;
+
+    border-radius: 24px !important;
+
+    background:
+        linear-gradient(135deg, #667eea, #764ba2) !important;
+
+    box-shadow:
+        0 15px 35px rgba(80, 70, 160, 0.25) !important;
+
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.dashboard-header::after {
+    content: "" !important;
+    position: absolute !important;
+
+    width: 180px !important;
+    height: 180px !important;
+
+    right: -50px !important;
+    top: -80px !important;
+
+    border-radius: 50% !important;
+
+    background: rgba(255,255,255,0.10) !important;
+}
+
+.dashboard-header h1 {
+    margin: 0 0 7px !important;
+
+    color: white !important;
+
+    font-size: 32px !important;
+    font-weight: 800 !important;
+
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+.dashboard-header p {
+    margin: 0 !important;
+
+    color: rgba(255,255,255,0.90) !important;
+
+    font-size: 15px !important;
+
+    position: relative !important;
+    z-index: 2 !important;
+}
+
+/* ===== LOGOUT ===== */
+
+.logout-btn {
+    padding: 12px 23px !important;
+
+    border-radius: 12px !important;
+
+    background: rgba(255,255,255,0.18) !important;
+    color: white !important;
+
+    text-decoration: none !important;
+    font-weight: 700 !important;
+
+    border: 1px solid rgba(255,255,255,0.40) !important;
+
+    transition: 0.25s ease !important;
+
+    position: relative !important;
+    z-index: 5 !important;
+}
+
+.logout-btn:hover {
+    background: white !important;
+    color: #667eea !important;
+
+    transform: translateY(-2px) !important;
+}
+
+/* ===== CARDS GRID ===== */
+
+.dashboard-grid {
+    display: grid !important;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+
+    gap: 24px !important;
+
+    width: 100% !important;
+}
+
+/* ===== CARD ===== */
+
+.dashboard-card {
+    position: relative !important;
+
+    background: rgba(255,255,255,0.96) !important;
+
+    padding: 25px !important;
+
+    min-height: 190px !important;
+
+    border-radius: 21px !important;
+
+    border: 1px solid rgba(255,255,255,0.90) !important;
+
+    box-shadow:
+        0 8px 25px rgba(60,60,120,0.10) !important;
+
+    overflow: hidden !important;
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease !important;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-6px) !important;
+
+    box-shadow:
+        0 18px 38px rgba(60,60,120,0.18) !important;
+}
+
+/* ===== TOP LINE ===== */
+
+.dashboard-card::before {
+    content: "" !important;
+
+    position: absolute !important;
+
+    top: 0 !important;
+    left: 0 !important;
+
+    width: 100% !important;
+    height: 5px !important;
+
+    background:
+        linear-gradient(90deg, #667eea, #764ba2) !important;
+}
+
+/* ===== ICON ===== */
+
+.card-icon {
+    width: 56px !important;
+    height: 56px !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+
+    border-radius: 17px !important;
+
+    background: #f0edff !important;
+
+    font-size: 29px !important;
+
+    margin-bottom: 16px !important;
+
+    box-shadow:
+        0 5px 12px rgba(80,70,160,0.08) !important;
+}
+
+/* ===== TITLE ===== */
+
+.dashboard-card h3 {
+    margin: 0 0 8px !important;
+
+    color: #202040 !important;
+
+    font-size: 21px !important;
+    font-weight: 750 !important;
+}
+
+/* ===== DESCRIPTION ===== */
+
+.dashboard-card p {
+    margin: 0 0 12px !important;
+
+    color: #6b6b80 !important;
+
+    font-size: 14px !important;
+    line-height: 1.5 !important;
+}
+
+/* ===== LINKS ===== */
+
+.dashboard-card a {
+    color: #6741d9 !important;
+
+    text-decoration: none !important;
+
+    font-weight: 700 !important;
+
+    font-size: 14px !important;
+
+    transition: 0.2s ease !important;
+}
+
+.dashboard-card a:hover {
+    color: #e83e8c !important;
+
+    padding-left: 3px !important;
+}
+
+/* ===== DIFFERENT ICON BACKGROUNDS ===== */
+
+.dashboard-card:nth-child(1) .card-icon {
+    background: #e8efff !important;
+}
+
+.dashboard-card:nth-child(2) .card-icon {
+    background: #eee8ff !important;
+}
+
+.dashboard-card:nth-child(3) .card-icon {
+    background: #ffe8f1 !important;
+}
+
+.dashboard-card:nth-child(4) .card-icon {
+    background: #e6f9ee !important;
+}
+
+.dashboard-card:nth-child(5) .card-icon {
+    background: #fff2dc !important;
+}
+
+.dashboard-card:nth-child(6) .card-icon {
+    background: #e5f8ff !important;
+}
+
+.dashboard-card:nth-child(7) .card-icon {
+    background: #eee8ff !important;
+}
+
+.dashboard-card:nth-child(8) .card-icon {
+    background: #fff0df !important;
+}
+
+.dashboard-card:nth-child(9) .card-icon {
+    background: #e4fff3 !important;
+}
+
+.dashboard-card:nth-child(10) .card-icon {
+    background: #ffe8ee !important;
+}
+
+/* ===== ATTENDANCE ===== */
+
+.attendance-card {
+    background:
+        linear-gradient(135deg, #ffffff, #e9f9ff) !important;
+
+    border: 2px solid #b8ecff !important;
+}
+
+.attendance-card::before {
+    background:
+        linear-gradient(90deg, #00b894, #00cec9) !important;
+}
+
+.attendance-percentage {
+    font-size: 38px !important;
+
+    font-weight: 800 !important;
+
+    color: #00a878 !important;
+
+    margin: 6px 0 !important;
+}
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 950px) {
+
+    .dashboard-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    }
+}
+
+@media (max-width: 600px) {
+
+    .dashboard-container {
+        width: 94% !important;
+        padding-top: 20px !important;
+    }
+
+    .dashboard-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 17px !important;
+
+        padding: 25px !important;
+    }
+
+    .dashboard-header h1 {
+        font-size: 27px !important;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr !important;
+    }
+}

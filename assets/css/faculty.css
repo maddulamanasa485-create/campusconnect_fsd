@@ -1,0 +1,1056 @@
+/* =========================================
+   CampusConnect Faculty Dashboard
+   ========================================= */
+
+body.faculty-page {
+    min-height: 100vh;
+
+    margin: 0;
+
+    padding: 40px 25px;
+
+    background: #f5f7fa !important;
+
+    color: #222222;
+
+    font-family: Arial, sans-serif;
+
+    display: block !important;
+}
+
+.faculty-dashboard {
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+}
+
+.faculty-page h1 {
+    text-align: center;
+
+    color: #222222;
+
+    font-size: 32px;
+
+    margin-bottom: 8px;
+}
+
+.faculty-page .subtitle {
+    text-align: center;
+
+    color: #666666;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+}
+
+.faculty-cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.faculty-card {
+    text-decoration: none;
+
+    padding: 30px;
+
+    border-radius: 18px;
+
+    color: #222222;
+
+    border: 1px solid #e5e7eb;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.07);
+
+    transition: 0.3s;
+}
+
+.faculty-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.faculty-card .icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.faculty-card h2 {
+    font-size: 21px;
+
+    margin-bottom: 10px;
+}
+
+.faculty-card p {
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin: 0;
+}
+
+/* Different light shades */
+
+.timetable-card {
+    background: #eaf4ff;
+}
+
+.students-card {
+    background: #f3ecff;
+}
+
+.materials-card {
+    background: #eafbf0;
+}
+
+.classes-card {
+    background: #fff0f5;
+}
+
+.attendance-card {
+    background: #fff9e6;
+}
+
+.announcements-card {
+    background: #fff0f0;
+}
+
+.marks-card {
+    background: #e8fafa;
+}
+
+/* Card text */
+
+.timetable-card h2 {
+    color: #28527a;
+}
+
+.students-card h2 {
+    color: #4d3b70;
+}
+
+.materials-card h2 {
+    color: #285c3d;
+}
+
+.classes-card h2 {
+    color: #733c50;
+}
+
+.attendance-card h2 {
+    color: #66571f;
+}
+
+.announcements-card h2 {
+    color: #713d45;
+}
+
+.marks-card h2 {
+    color: #285858;
+}
+
+/* Logout */
+
+.faculty-page .logout {
+    display: block;
+
+    width: 140px;
+
+    margin: 35px auto 0;
+
+    padding: 12px 20px;
+
+    text-align: center;
+
+    text-decoration: none;
+
+    background: #333333;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.faculty-page .logout:hover {
+    background: #f4774a;
+
+    transform: translateY(-2px);
+}
+
+/* Mobile */
+
+@media (max-width: 900px) {
+
+    .faculty-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+@media (max-width: 600px) {
+
+    body.faculty-page {
+        padding: 25px 15px;
+    }
+
+    .faculty-page h1 {
+        font-size: 26px;
+    }
+
+    .faculty-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .faculty-card {
+        padding: 25px;
+    }
+
+}
+/* =========================================
+   Faculty Timetable
+   ========================================= */
+
+.faculty-timetable-page .faculty-table-card {
+    background: #eaf4ff;
+
+    border: 1px solid #cfe5ff;
+
+    padding: 32px;
+
+    border-radius: 18px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.faculty-timetable-page .faculty-table-card h2 {
+    color: #28527a;
+
+    font-size: 24px;
+
+    margin-bottom: 20px;
+}
+
+.faculty-timetable-page table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    background: #eaf4ff;
+
+    font-size: 15px;
+}
+
+.faculty-timetable-page th {
+    background: #dceeff;
+
+    color: #243f55;
+
+    padding: 16px;
+
+    text-align: left;
+
+    border-bottom: 2px solid #c5dff5;
+}
+
+.faculty-timetable-page td {
+    background: #eaf4ff;
+
+    color: #334b5c;
+
+    padding: 16px;
+
+    border-bottom: 1px solid #cfe5ff;
+}
+
+.faculty-timetable-page tr:hover td {
+    background: #dff0ff;
+}
+
+.faculty-timetable-page .back-link {
+    display: inline-block;
+
+    margin-top: 20px;
+
+    color: #333333;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.faculty-timetable-page .back-link:hover {
+    color: #f4774a;
+}
+
+@media (max-width: 700px) {
+
+    .faculty-timetable-page .faculty-table-card {
+        padding: 20px;
+    }
+
+    .faculty-timetable-page th,
+    .faculty-timetable-page td {
+        padding: 12px;
+    }
+
+}
+/* =========================================
+   Faculty Students Page
+   ========================================= */
+
+.faculty-students-page .student-table-card {
+    background: #f3ecff;
+    border: 1px solid #dfd2f5;
+    padding: 32px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.faculty-students-page .student-table-card h2 {
+    color: #4d3b70;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.faculty-students-page table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #f3ecff;
+    font-size: 15px;
+}
+
+.faculty-students-page th {
+    background: #e8dcfa;
+    color: #44365f;
+    padding: 16px;
+    text-align: left;
+    border-bottom: 2px solid #d6c5ee;
+}
+
+.faculty-students-page td {
+    background: #f3ecff;
+    color: #4b4160;
+    padding: 16px;
+    border-bottom: 1px solid #dfd2f5;
+}
+
+.faculty-students-page tr:hover td {
+    background: #eee4fc;
+}
+
+.faculty-students-page .active {
+    color: #16803c;
+    font-weight: bold;
+}
+
+.faculty-students-page .back-link {
+    display: inline-block;
+    margin-top: 20px;
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.faculty-students-page .back-link:hover {
+    color: #f4774a;
+}
+
+@media (max-width: 700px) {
+
+    .faculty-students-page .student-table-card {
+        padding: 20px;
+    }
+
+    .faculty-students-page th,
+    .faculty-students-page td {
+        padding: 12px;
+    }
+}
+/* =========================================
+   Faculty Upload Materials Page
+   ========================================= */
+
+.faculty-materials-page .material-upload-card {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #eafbf0;
+    border: 1px solid #ccebd8;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.faculty-materials-page .material-upload-card h2 {
+    color: #285c3d;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.faculty-materials-page .form-group {
+    margin-bottom: 20px;
+}
+
+.faculty-materials-page .form-group label {
+    display: block;
+    color: #285c3d;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.faculty-materials-page input,
+.faculty-materials-page select,
+.faculty-materials-page textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #c9dfd2;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 15px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.faculty-materials-page textarea {
+    resize: vertical;
+}
+
+.faculty-materials-page input:focus,
+.faculty-materials-page select:focus,
+.faculty-materials-page textarea:focus {
+    border-color: #5ca879;
+    box-shadow: 0 0 0 3px rgba(92, 168, 121, 0.15);
+}
+
+.faculty-materials-page input[type="file"] {
+    padding: 11px;
+    background: #ffffff;
+}
+
+.faculty-materials-page small {
+    display: block;
+    margin-top: 7px;
+    color: #66756b;
+    font-size: 13px;
+}
+
+.faculty-materials-page button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #285c3d;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faculty-materials-page button:hover {
+    background: #3d7d57;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(40, 92, 61, 0.25);
+}
+
+.faculty-materials-page .back-link {
+    display: block;
+    width: fit-content;
+    margin: 20px auto 0;
+    color: #333333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.faculty-materials-page .back-link:hover {
+    color: #f4774a;
+}
+
+@media (max-width: 700px) {
+
+    .faculty-materials-page .material-upload-card {
+        padding: 22px;
+    }
+
+}
+
+/* Upload Message */
+
+.faculty-materials-page .upload-message {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.faculty-materials-page .upload-message.success {
+    background: #e8f7ed;
+    color: #16803c;
+    border: 1px solid #bfe3ca;
+}
+
+.faculty-materials-page .upload-message.error {
+    background: #fff0ed;
+    color: #c2410c;
+    border: 1px solid #f3c5ba;
+}
+/* =========================================
+   Faculty Recorded Classes Page
+   ========================================= */
+
+.faculty-classes-page .class-upload-card {
+    max-width: 750px;
+    margin: 0 auto;
+    background: #fff0f5;
+    border: 1px solid #f0d3df;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.faculty-classes-page .class-upload-card h2 {
+    color: #733c50;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.faculty-classes-page .form-group {
+    margin-bottom: 20px;
+}
+
+.faculty-classes-page .form-group label {
+    display: block;
+    color: #733c50;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.faculty-classes-page input,
+.faculty-classes-page select,
+.faculty-classes-page textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e2cbd4;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #333333;
+    font-size: 15px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.faculty-classes-page textarea {
+    resize: vertical;
+}
+
+.faculty-classes-page input:focus,
+.faculty-classes-page select:focus,
+.faculty-classes-page textarea:focus {
+    border-color: #c56a89;
+    box-shadow: 0 0 0 3px rgba(197, 106, 137, 0.15);
+}
+
+.faculty-classes-page input[type="file"] {
+    padding: 11px;
+}
+
+.faculty-classes-page small {
+    display: block;
+    margin-top: 7px;
+    color: #77636a;
+    font-size: 13px;
+}
+
+.faculty-classes-page button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #733c50;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faculty-classes-page button:hover {
+    background: #9a526d;
+    transform: translateY(-2px);
+}
+
+.faculty-classes-page .class-message {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.faculty-classes-page .class-message.success {
+    background: #e8f7ed;
+    color: #16803c;
+    border: 1px solid #bfe3ca;
+}
+
+.faculty-classes-page .class-message.error {
+    background: #fff0ed;
+    color: #c2410c;
+    border: 1px solid #f3c5ba;
+}
+
+@media (max-width: 700px) {
+
+    .faculty-classes-page .class-upload-card {
+        padding: 22px;
+    }
+
+}
+/* ============================= */
+/* ATTENDANCE */
+/* ============================= */
+
+.attendance-card {
+    max-width: 950px;
+    margin: 0 auto;
+    background: #eaf7f0;
+    border: 1px solid #c9e8d7;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+}
+
+.attendance-card h2 {
+    color: #276749;
+    margin-bottom: 25px;
+}
+
+.attendance-card h3 {
+    color: #276749;
+    margin: 25px 0 15px;
+}
+
+.attendance-form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.attendance-form label {
+    display: block;
+    font-weight: bold;
+    color: #276749;
+    margin-bottom: 8px;
+}
+
+.attendance-form select,
+.attendance-form input[type="date"] {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #b8dcca;
+    border-radius: 10px;
+    background: white;
+}
+
+.attendance-table-wrapper {
+    overflow-x: auto;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.attendance-table th,
+.attendance-table td {
+    padding: 14px;
+    border-bottom: 1px solid #e5e5e5;
+    text-align: left;
+}
+
+.attendance-table th {
+    background: #d8f0e2;
+    color: #276749;
+}
+
+.attendance-radio {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.attendance-card button {
+    width: 100%;
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #276749;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.attendance-card button:hover {
+    background: #1f5139;
+}
+
+@media (max-width: 700px) {
+
+    .attendance-form {
+        grid-template-columns: 1fr;
+    }
+
+    .attendance-card {
+        padding: 20px;
+    }
+}
+/* ============================= */
+/* FACULTY ANNOUNCEMENTS */
+/* ============================= */
+
+.faculty-announcements-page .announcement-upload-card {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    background: #fff1f5;
+    border: 1px solid #f0d3df;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.faculty-announcements-page .announcement-upload-card h2 {
+    color: #733c50;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.announcement-form-group {
+    margin-bottom: 20px;
+}
+
+.announcement-form-group label {
+    display: block;
+    color: #733c50;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.announcement-form-group input,
+.announcement-form-group textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e2cbd4;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    font-size: 15px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+
+.announcement-form-group textarea {
+    resize: vertical;
+}
+
+.announcement-form-group input:focus,
+.announcement-form-group textarea:focus {
+    border-color: #c56a89;
+    box-shadow: 0 0 0 3px rgba(197, 106, 137, 0.15);
+}
+
+.faculty-announcements-page button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #733c50;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faculty-announcements-page button:hover {
+    background: #9a526d;
+    transform: translateY(-2px);
+}
+
+
+/* MESSAGE */
+
+.announcement-message {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.announcement-message.success {
+    background: #e8f7ed;
+    color: #16803c;
+    border: 1px solid #bfe3ca;
+}
+
+.announcement-message.error {
+    background: #fff0ed;
+    color: #c2410c;
+    border: 1px solid #f3c5ba;
+}
+
+
+/* EXISTING ANNOUNCEMENTS */
+
+.existing-announcements {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.existing-announcements > h2 {
+    text-align: center;
+    color: #733c50;
+    margin-bottom: 20px;
+}
+
+.announcement-list {
+    display: grid;
+    gap: 20px;
+}
+
+.announcement-card {
+    background: white;
+    border: 1px solid #f0d3df;
+    border-radius: 16px;
+    padding: 22px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.announcement-card h3 {
+    color: #733c50;
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.announcement-text {
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.announcement-date {
+    color: #888;
+    font-size: 13px;
+}
+
+.no-announcements {
+    background: white;
+    border: 1px solid #f0d3df;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: #733c50;
+    font-weight: bold;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+    .faculty-announcements-page .announcement-upload-card {
+        padding: 22px;
+    }
+
+}
+/* ============================= */
+/* FACULTY MARKS */
+/* ============================= */
+
+.faculty-marks-page .marks-upload-card {
+    max-width: 750px;
+    margin: 0 auto 30px;
+    background: #fff9e6;
+    border: 1px solid #f0dfaa;
+    padding: 35px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.faculty-marks-page .marks-upload-card h2 {
+    color: #795b16;
+    font-size: 24px;
+    margin-bottom: 25px;
+}
+
+.marks-form-group {
+    margin-bottom: 20px;
+}
+
+.marks-form-group label {
+    display: block;
+    color: #795b16;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.marks-form-group input,
+.marks-form-group select {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #e2d5ad;
+    border-radius: 10px;
+    background: #fff;
+    color: #333;
+    font-size: 15px;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.marks-form-group input:focus,
+.marks-form-group select:focus {
+    border-color: #c5a63a;
+    box-shadow: 0 0 0 3px rgba(197, 166, 58, 0.15);
+}
+
+.marks-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.faculty-marks-page button {
+    width: 100%;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    background: #795b16;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.faculty-marks-page button:hover {
+    background: #9a7620;
+    transform: translateY(-2px);
+}
+
+
+/* MESSAGE */
+
+.marks-message {
+    max-width: 750px;
+    margin: 0 auto 20px;
+    padding: 14px 18px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.marks-message.success {
+    background: #e8f7ed;
+    color: #16803c;
+    border: 1px solid #bfe3ca;
+}
+
+.marks-message.error {
+    background: #fff0ed;
+    color: #c2410c;
+    border: 1px solid #f3c5ba;
+}
+
+
+/* RECENT MARKS */
+
+.recent-marks {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.recent-marks h2 {
+    text-align: center;
+    color: #795b16;
+    margin-bottom: 20px;
+}
+
+.marks-table-wrapper {
+    overflow-x: auto;
+}
+
+.marks-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.marks-table th {
+    background: #795b16;
+    color: white;
+    padding: 14px;
+    text-align: left;
+}
+
+.marks-table td {
+    padding: 13px;
+    border-bottom: 1px solid #eee;
+    color: #555;
+}
+
+.marks-table tr:hover {
+    background: #fffaf0;
+}
+
+.no-marks {
+    background: white;
+    border: 1px solid #f0dfaa;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    color: #795b16;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+
+    .faculty-marks-page .marks-upload-card {
+        padding: 22px;
+    }
+
+    .marks-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+}
+
+.faculty-marks-page .marks-form-group small {
+    display: block;
+    margin-top: 7px;
+    color: #888;
+    font-size: 13px;
+}
